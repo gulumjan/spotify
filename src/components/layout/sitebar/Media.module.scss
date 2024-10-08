@@ -1,0 +1,60 @@
+.Media {
+  .content {
+    .media {
+      border-radius: 22px;
+      min-width: 200;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 7px 0 12px 0;
+
+      .my {
+        padding: 19px 5px 0 15px;
+        display: flex;
+        justify-content: center;
+        gap: 56px;
+        width: 90%;
+      }
+
+      .createPlaylist {
+        margin-top: 40px;
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+
+        h6 {
+          padding: 12px 0;
+        }
+
+        h5 {
+          padding: 18px 0;
+        }
+
+        button {
+          background-color: #fff;
+          color: #000;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          padding: 7px 18px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .Media {
+    display: none !important;
+  }
+}

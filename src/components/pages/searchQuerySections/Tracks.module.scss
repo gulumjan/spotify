@@ -1,0 +1,129 @@
+.SearchResults {
+  margin-top: 20px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .content {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 50px;
+
+      .firstTrack {
+        max-width: 550px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .contentt {
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+          background: rgb(32, 32, 32);
+          padding: 15px 48px;
+
+          border-radius: 12px;
+
+          &:hover {
+            transition: 0.3s;
+            background: rgba(128, 128, 128, 0.29);
+            border-radius: 8px;
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+
+          h4 {
+            font-size: 25px;
+          }
+          h5 {
+            font-size: 15px;
+          }
+          span {
+            font-size: 15;
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .otherTracks {
+        width: 100%;
+
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 40px;
+
+        .tracks {
+          width: 120vh;
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+
+          // Apply scrolling to the track list
+          max-height: 500px; /* Set your desired max height */
+          overflow-y: auto; /* Enable vertical scrolling */
+          scrollbar-width: thin; /* Firefox */
+          scrollbar-color: rgba(128, 128, 128, 0.7) transparent; /* Custom scrollbar colors */
+
+          .track {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 12px;
+
+            &:hover {
+              background: rgba(128, 128, 128, 0.425);
+              border-radius: 8px;
+            }
+
+            h6 {
+              margin-left: auto;
+            }
+
+            img {
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+
+            .text {
+              display: flex;
+              align-items: start;
+              justify-content: center;
+              flex-direction: column;
+              gap: 8px;
+
+              h4 {
+                font-size: 15px;
+                font-weight: 500;
+              }
+
+              h5 {
+                font-size: 12px;
+                font-weight: 500;
+                color: rgb(142, 142, 141);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

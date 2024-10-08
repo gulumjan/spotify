@@ -1,0 +1,78 @@
+.PlayList {
+  display: flex;
+
+  h1 {
+    padding: 12px 0 0 15px;
+  }
+
+  .content {
+    display: flex;
+    gap: 45px;
+
+    .allMusic {
+      padding-right: 50px;
+      width: 1200px;
+      min-height: 900px;
+      max-height: 700px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 12px;
+      .tracks {
+        width: 100%;
+      }
+      .btns {
+        margin-bottom: 20px;
+        display: flex;
+        position: sticky;
+        // top: 10;
+        padding: 10px 0;
+        z-index: 1;
+        button {
+          margin-right: 10px;
+          padding: 10px 20px;
+          background: none;
+          color: #fff;
+          border-radius: 5px;
+          border: 1px solid transparent;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+
+          &.active {
+            background-color: #1db954;
+            color: #fff;
+            border-color: #1db954;
+          }
+        }
+      }
+
+      h2 {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 828px) {
+  .PlayList {
+    .content {
+      .media {
+        display: none;
+      }
+
+      .allMusic {
+        .btns {
+          display: none;
+        }
+
+        h2 {
+          text-align: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

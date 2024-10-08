@@ -1,0 +1,30 @@
+/* components/Loader.module.scss */
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000; /* Dark background to match Spotify theme */
+
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1); /* Light transparent border */
+    border-left-color: #1db954; /* Spotify green color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  p {
+    margin-top: 16px;
+    font-size: 1.2rem;
+    color: #fff; /* White text color */
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

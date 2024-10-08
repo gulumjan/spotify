@@ -1,0 +1,13 @@
+.ProfileButton {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}

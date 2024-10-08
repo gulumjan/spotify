@@ -1,0 +1,41 @@
+.PopularArtists {
+  .content {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+
+      .card {
+        position: relative;
+        padding: 8px 10px;
+
+        img {
+          border-radius: 50%;
+          width: 180px;
+          height: 180px;
+          object-fit: cover;
+        }
+
+        .play {
+          display: none;
+          position: absolute;
+          top: 60%;
+          right: 23px;
+          transform: translateY(-50%);
+          z-index: 1;
+          color: #1db954;
+          font-size: 40px;
+        }
+      }
+
+      .card:hover {
+        background: #51515134;
+        border-radius: 8px;
+
+        .play {
+          display: block;
+        }
+      }
+    }
+  }
+}

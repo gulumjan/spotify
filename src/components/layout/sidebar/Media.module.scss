@@ -1,0 +1,74 @@
+.Media {
+  .content {
+    .media {
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.06);
+
+      padding: 10px 30px 350px 10px; // Adjust the padding to define size indirectly
+
+      .my {
+        padding: 19px 5px 0 15px;
+        display: flex;
+        justify-content: center;
+        gap: 56px;
+        width: 90%;
+      }
+      .playlists {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0 0 12px;
+        .card {
+          img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .my1 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .createPlaylist {
+        margin-top: 40px;
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+
+        h6 {
+          padding: 12px 0;
+        }
+
+        h5 {
+          padding: 18px 0;
+        }
+
+        button {
+          background-color: #fff;
+          color: #000;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          padding: 7px 18px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}

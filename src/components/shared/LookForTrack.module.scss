@@ -1,0 +1,44 @@
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: #222222; // Dark background as seen in the image
+  border-radius: 50px;
+  padding: 5px 10px;
+  color: #fff;
+  border: 1px solid #333; // Subtle border for the container
+
+  .searchIcon {
+    position: absolute;
+    left: 15px; // Space between left edge and search icon
+    font-size: 20px;
+    color: #b3b3b3; // Gray color for the search icon
+  }
+
+  .input {
+    flex-grow: 1;
+    background-color: transparent; // Matches the background of the container
+    border: none;
+    outline: none;
+    color: #ffffff; // White text inside the input
+    padding: 12px 80px; // Padding to account for icons and comfortable typing
+    border-radius: 50px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #b3b3b3; // Light gray placeholder text
+      font-size: 14px;
+    }
+  }
+
+  .browseIcon {
+    font-size: 20px;
+    color: #b3b3b3;
+    margin-right: 5px; // Space between the browse icon and the right edge
+    cursor: pointer;
+  }
+}

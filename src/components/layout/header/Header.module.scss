@@ -1,0 +1,220 @@
+.Header {
+  padding: 4px 0;
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 999;
+
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      margin: 7px 0;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        svg {
+          width: 40px;
+          height: 40px;
+          color: #1db954;
+        }
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 0 20px;
+
+      .searchInput {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .search1 {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 10px;
+          background: rgb(31, 31, 31);
+          border: 2px solid rgb(173, 171, 171);
+          border-radius: 20px;
+          padding: 7px;
+          width: 360px;
+          height: 40px;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+          }
+
+          input {
+            outline: none;
+            border: none;
+            background: none;
+
+            ::placeholder {
+              color: gray;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      input {
+        width: 100%;
+        padding: 2px 12px;
+        border-radius: 20px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+        outline: none;
+        transition: background-color 0.3s;
+
+        &::placeholder {
+          color: #888;
+        }
+
+        &:focus {
+          background-color: #444;
+        }
+      }
+
+      svg {
+        color: #fff;
+        margin-right: 8px;
+      }
+    }
+    .icons_block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      .auth {
+        button {
+          background: none;
+          border: none;
+          color: #fff;
+          padding: 8px 28px;
+        }
+      }
+      .download {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .icon_save {
+          color: #fff;
+          padding: 8px 22px;
+          border-radius: 8px;
+          gap: 8px;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .Header {
+    min-width: 700px;
+    .search {
+      margin: 0 10px;
+      input {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+    }
+    .icons_block {
+      .download {
+        .icon_save {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .Header {
+    .search {
+      margin: 0 10px;
+      input {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+    }
+    .icons_block {
+      .download {
+        .icon_save {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .Header {
+    padding: 4px 0;
+    min-width: 314px; // Adjust width for smaller screens
+
+    .content {
+      .logo {
+        margin: 5px 0;
+        svg {
+          width: 35px; // Slightly smaller logo for 414px width
+          height: 35px;
+        }
+      }
+
+      .search {
+        // margin: 0 8px;
+        // max-width: 100%;
+        display: none;
+
+        // .searchInput {
+        //   .search1 {
+        //     width: 300px; // Adjust the search bar width for the smaller screen
+        //     padding: 5px; // Slightly reduce padding
+        //   }
+        // }
+
+        // input {
+        //   font-size: 14px; // Ensure input font size looks good
+        //   padding: 5px 10px; // Adjust padding
+        // }
+      }
+
+      .icons_block {
+        gap: 30px; // Reduce gap for icons to fit on smaller screens
+
+        .auth {
+          button {
+            padding: 6px 18px; // Adjust button size
+          }
+        }
+
+        .download {
+          margin-right: 19px;
+          gap: 15px;
+
+          .icon_save {
+            padding: 6px 18px;
+          }
+        }
+      }
+    }
+  }
+}

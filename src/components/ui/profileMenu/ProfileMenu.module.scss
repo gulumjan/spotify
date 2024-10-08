@@ -1,0 +1,56 @@
+.ProfileMenu {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: flex-start;
+    background: rgb(63, 62, 62);
+    border-radius: 5px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      padding: 11px 15px;
+      width: 200px;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      &:hover {
+        background: rgb(99, 97, 97);
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-left: 20px;
+      }
+    }
+
+    hr {
+      width: 200px;
+    }
+    .logout {
+      width: 200px;
+      padding: 15px;
+      &:hover {
+        background: rgb(99, 97, 97);
+      }
+
+      button {
+        font-size: 14px;
+        border: none;
+      }
+    }
+  }
+}

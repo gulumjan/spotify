@@ -1,0 +1,69 @@
+.LayoutSite {
+  display: flex;
+  flex-direction: column;
+  height: 125vh;
+
+  .content {
+    margin-top: 22px;
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+
+    .Media {
+      overflow-y: auto;
+
+      // Remove unnecessary scrollbar properties for better consistency
+      scrollbar-width: thin;
+      scrollbar-color: rgba(128, 128, 128, 0.7) transparent;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 128, 128, 0.7); // Set the thumb color
+        border-radius: 10px;
+      }
+    }
+    main {
+      border-radius: 9px;
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 15px;
+      width: 100%;
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0;
+      height: 83vh;
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  footer {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .Media {
+    display: none !important;
+  }
+}
