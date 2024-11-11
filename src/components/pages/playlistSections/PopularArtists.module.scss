@@ -2,18 +2,25 @@
   .content {
     .cards {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row; // Set direction to row for horizontal layout
       gap: 18px;
+      overflow-x: auto; // Enable horizontal scrolling
+      scroll-snap-type: x mandatory; // Snap to each card
+      padding-bottom: 10px; // Add some space for better scrolling UX
 
       .card {
         position: relative;
+        flex: 0 0 auto; // Prevent items from wrapping and ensure horizontal layout
         padding: 8px 10px;
+        text-align: center;
+        scroll-snap-align: start; // Snap each card to the start of view
 
         img {
           border-radius: 50%;
           width: 180px;
           height: 180px;
           object-fit: cover;
+          transition: transform 0.3s ease;
         }
 
         .play {
@@ -26,14 +33,131 @@
           color: #1db954;
           font-size: 40px;
         }
+
+        &:hover {
+          background: #51515134;
+          border-radius: 8px;
+
+          img {
+            transform: scale(1.05);
+          }
+
+          .play {
+            display: block;
+          }
+        }
+
+        h4,
+        p {
+          color: white;
+          margin: 8px 0;
+        }
+
+        h4 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 14px;
+          color: #b3b3b3;
+        }
       }
+    }
+  }
+}
 
-      .card:hover {
-        background: #51515134;
-        border-radius: 8px;
+// Responsive adjustments for horizontal scrolling
+@media (max-width: 768px) {
+  .PopularArtists {
+    .content {
+      .cards {
+        gap: 12px;
 
-        .play {
-          display: block;
+        .card {
+          padding: 6px 8px;
+
+          img {
+            width: 140px;
+            height: 140px;
+          }
+
+          h4 {
+            font-size: 14px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+
+          .play {
+            font-size: 30px;
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .PopularArtists {
+    .content {
+      .cards {
+        gap: 10px;
+
+        .card {
+          padding: 4px 6px;
+
+          img {
+            width: 120px;
+            height: 120px;
+          }
+
+          h4 {
+            font-size: 13px;
+          }
+
+          p {
+            font-size: 11px;
+          }
+
+          .play {
+            font-size: 25px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .PopularArtists {
+    .content {
+      .cards {
+        gap: 8px;
+
+        .card {
+          padding: 3px 5px;
+
+          img {
+            width: 100px;
+            height: 100px;
+          }
+
+          h4 {
+            font-size: 12px;
+          }
+
+          p {
+            font-size: 10px;
+          }
+
+          .play {
+            font-size: 20px;
+            right: 8px;
+          }
         }
       }
     }

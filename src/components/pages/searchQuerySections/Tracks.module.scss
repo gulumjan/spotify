@@ -73,11 +73,10 @@
           align-items: start;
           flex-direction: column;
 
-          // Apply scrolling to the track list
-          max-height: 500px; /* Set your desired max height */
-          overflow-y: auto; /* Enable vertical scrolling */
-          scrollbar-width: thin; /* Firefox */
-          scrollbar-color: rgba(128, 128, 128, 0.7) transparent; /* Custom scrollbar colors */
+          max-height: 500px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+          scrollbar-color: rgba(128, 128, 128, 0.7) transparent;
 
           .track {
             width: 100%;
@@ -123,6 +122,17 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .SearchResults {
+    .container {
+      .content {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

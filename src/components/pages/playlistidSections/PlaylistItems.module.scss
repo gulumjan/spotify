@@ -58,10 +58,8 @@
 
   .playlistHeader {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     margin-bottom: 20px;
-    // min-width: 800px;
-    // height: 250px;
 
     .playlistImage {
       border-radius: 10px;
@@ -135,7 +133,6 @@
   .track {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     grid-template-columns: 40px 3fr 2fr 1fr;
     padding: 10px 0 0 30px;
@@ -179,6 +176,46 @@
       text-align: center;
       margin-left: 180px;
       padding: 0 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .playlistHeader {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .playlistInfo {
+      h1 {
+        font-size: 12px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .tracksHeader {
+    font-size: 12px;
+    padding: 12px 8px;
+    max-width: 350px;
+  }
+
+  .track {
+    display: flex;
+    max-width: 100px;
+    span {
+      display: none;
+    }
+    .trackDetails {
+      p {
+        display: none;
+      }
+    }
+    .albumImage {
+      width: 40px;
+      height: 40px;
     }
   }
 }

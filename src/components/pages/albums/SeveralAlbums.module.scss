@@ -1,4 +1,18 @@
 .SeveralAlbums {
+  overflow-x: auto;
+  padding: 10px 0;
+
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.7);
+    border-radius: 10px;
+  }
+
   .content {
     display: flex;
     flex-wrap: nowrap;
@@ -13,6 +27,8 @@
       justify-content: space-between;
       position: relative;
       padding: 12px 28px;
+      border-radius: 8px;
+
       img {
         width: 150px;
         height: 150px;
@@ -37,14 +53,32 @@
         color: #1db954;
         font-size: 40px;
       }
+
+      &:hover {
+        background: rgba(81, 81, 81, 0.2);
+
+        .play {
+          display: block;
+        }
+      }
     }
+  }
 
-    .playlist:hover {
-      background: #51515134;
-      border-radius: 8px;
+  @media (max-width: 768px) {
+    .content {
+      gap: 8px;
 
-      .play {
-        display: block;
+      .playlist {
+        padding: 8px 20px;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+
+        h5 {
+          font-size: 12px;
+        }
       }
     }
   }

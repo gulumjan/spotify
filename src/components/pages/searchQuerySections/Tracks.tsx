@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import scss from "./Tracks.module.scss";
 import { useParams } from "next/navigation";
 import Image from "next/image";
@@ -13,7 +13,6 @@ const Tracks = () => {
   const { setTrackUris, setTrackIndex } = usePlayerStore();
 
   const { data } = useSearchTracksQuery(decodeText);
-  console.log("🚀 ~ SearchResults ~ data:", data);
 
   const firstTrack = data?.tracks.items[0];
 

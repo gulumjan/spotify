@@ -9,12 +9,10 @@ const PopularArtists = () => {
   const { setTrackUris, setTrackIndex, trackIndex } = usePlayerStore();
 
   const playMusic = (index: number) => {
-    // Ensure we have a valid data and index
     if (data?.items && index < data.items.length) {
-      // Map over the items to get track URIs
       const getTrackUris = data.items.map((item) => item.uri);
-      setTrackUris(getTrackUris); // Set the track URIs
-      setTrackIndex(index); // Set the index of the track to be played
+      setTrackUris(getTrackUris);
+      setTrackIndex(index);
     }
   };
 
@@ -25,9 +23,9 @@ const PopularArtists = () => {
           <div className={scss.cards}>
             {data?.items.map((el, index) => (
               <div
-                onClick={() => playMusic(index)} // Use index directly
+                onClick={() => playMusic(index)}
                 className={scss.card}
-                key={el.id} // Use a unique key if available
+                key={el.id}
               >
                 <img
                   src={el.images[1]?.url || "/default-image.png"}

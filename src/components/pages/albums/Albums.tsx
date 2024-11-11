@@ -5,7 +5,6 @@ import { BsFillPlayCircleFill } from "react-icons/bs";
 
 const Albums = () => {
   const { data } = useGetAlbumsQuery();
-  // console.log("🚀 ~ Albums ~ data:", data);
 
   const { setTrackUris, setTrackIndex, trackIndex, trackUris } =
     usePlayerStore();

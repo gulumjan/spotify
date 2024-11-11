@@ -7,6 +7,7 @@ import {
 import scss from "./Blocks.module.scss";
 import { useRouter } from "next/navigation";
 import { usePlayerStore } from "@/stores/usePlayerStore";
+import Image from "next/image";
 
 const Blocks = () => {
   const { data } = useGetRecentLyPlayedTracksQuery();
@@ -44,7 +45,9 @@ const Blocks = () => {
                   className={scss.block}
                   key={index}
                 >
-                  <img
+                  <Image
+                    width={35}
+                    height={35}
                     src={
                       el?.track?.album?.images?.[0]?.url ||
                       "/default_playlist_cover.jpg"
@@ -52,7 +55,7 @@ const Blocks = () => {
                     alt=""
                   />
                   <div className={scss.text}>
-                    <h4>{el.track.album.name}</h4>
+                    <h4>{el.track.album.name.slice(0, 10)}</h4>
                     <p>{el.track.artists[0].name}</p>
                   </div>
                 </div>

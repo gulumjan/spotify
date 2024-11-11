@@ -1,56 +1,51 @@
 .PlayList {
   display: flex;
+  flex-direction: column;
+  padding: 10px;
 
   h1 {
     padding: 12px 0 0 15px;
+    font-size: 1.5rem; // Slightly smaller on phones
   }
 
   .content {
     display: flex;
-    gap: 45px;
+    flex-direction: column; // Stack elements on smaller screens
+    gap: 20px; // Reduced gap for phone sizes
 
     .allMusic {
-      padding-right: 50px;
-      width: 1200px;
-      min-height: 900px;
-      max-height: 700px;
+      width: 100%; // Full width on smaller screens
+      min-height: auto;
+      max-height: none;
+      padding-right: 0;
       display: flex;
       flex-direction: column;
-      border-radius: 12px;
+      border-radius: 8px;
+
       .tracks {
         width: 100%;
       }
+
       .btns {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         position: sticky;
-        // top: 10;
         padding: 10px 0;
         z-index: 1;
+
         button {
-          margin-right: 10px;
-          padding: 10px 20px;
-          background: none;
-          color: #fff;
-          border-radius: 5px;
-          border: 1px solid transparent;
-          transition: all 0.3s ease;
-
-          &:hover {
-            background-color: #fff;
-            color: #000;
-          }
-
-          &.active {
-            background-color: #1db954;
-            color: #fff;
-            border-color: #1db954;
-          }
+          margin-right: 8px;
+          padding: 8px 15px; // Reduced padding for smaller buttons
+          font-size: 0.9rem;
         }
       }
 
       h2 {
         color: #fff;
+        font-size: 1.25rem;
+        text-align: center; // Center-align headers on smaller screens
       }
     }
   }
@@ -59,18 +54,29 @@
 @media (max-width: 828px) {
   .PlayList {
     .content {
-      .media {
-        display: none;
-      }
-
       .allMusic {
         .btns {
           display: none;
         }
+      }
+    }
+  }
+}
 
+@media (max-width: 576px) {
+  .PlayList {
+    padding: 5px;
+
+    h1 {
+      font-size: 1.25rem;
+    }
+
+    .content {
+      gap: 10px;
+
+      .allMusic {
         h2 {
-          text-align: center;
-          color: #fff;
+          font-size: 1rem;
         }
       }
     }

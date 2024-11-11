@@ -25,7 +25,9 @@ const PlaylistItems = () => {
     description,
     setDescription,
   } = useChangeItemsStore();
-  const modalRef = useRef(null);
+
+  // Type the ref to avoid the 'never' type error
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   const [changePlaylistItems, { isLoading }] = useChangePlaylistItemsMutation();
   const [bgColor, setBgColor] = useState("#fff");
@@ -67,7 +69,7 @@ const PlaylistItems = () => {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
       setIsOpenChangeItems(false);
     }
   };

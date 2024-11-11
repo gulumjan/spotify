@@ -25,7 +25,6 @@ const ProfilePage = () => {
     <section
       style={{
         background: `linear-gradient(to bottom,#778899, #121212 50%)`,
-        // background: ` linear-gradient(180deg, #535353 0%, #3E3E3E 10%)`,
       }}
       className={scss.PlaylistItems}
     >

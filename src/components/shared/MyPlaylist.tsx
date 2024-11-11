@@ -7,13 +7,11 @@ import {
   useGetUserTopTracksQuery,
 } from "@/redux/api/playlist";
 import { useGetMeQuery } from "@/redux/api/me";
-import { useChangeItemsStore } from "@/stores/useChangeItems";
 
 const Playlist = () => {
   const { data } = useGetPlaylistQuery();
   const { currentData } = useGetUserTopTracksQuery("tracks");
   const { data: session } = useGetMeQuery();
-  const { playlistName } = useChangeItemsStore();
   const router = useRouter();
 
   return (

@@ -1,0 +1,33 @@
+.FooterMenu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000; // Adjust as needed
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff; // Icon and text color
+  }
+
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px; // Adjust as needed
+    color: #fff;
+
+    .icon {
+      font-size: 24px; // Icon size
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none; // Hide on larger screens
+  }
+}

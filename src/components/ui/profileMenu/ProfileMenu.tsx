@@ -24,7 +24,6 @@ const ProfileMenu = () => {
         {title.map((el, idx) => (
           <div key={idx} className={scss.text}>
             {el === "Profile" ? (
-              // <Link href="/profile">Profile</Link>
               <p onClick={() => router.push("/profile")}>Profile</p>
             ) : (
               <p>{el}</p>

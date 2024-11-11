@@ -26,10 +26,10 @@ const Media = () => {
               />
             </div>
             {!data ? (
-              <>
+              <div className={scss.createPlaylistContainer}>
                 <div className={scss.createPlaylist}>
                   <h5>Создай свой первый плейлист</h5>
-                  <h6>Это совсем не сложно ! Мы поможем.</h6>
+                  <h6>Это совсем не сложно! Мы поможем.</h6>
                   <button>Создать плейлист</button>
                 </div>
                 <div className={scss.createPlaylist}>
@@ -37,11 +37,9 @@ const Media = () => {
                   <h5>Ты будешь узнавать о новых выпусках.</h5>
                   <button>Обзор</button>
                 </div>
-              </>
+              </div>
             ) : (
-              <>
-                <MyPlaylist />
-              </>
+              <MyPlaylist />
             )}
           </div>
         </div>

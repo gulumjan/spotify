@@ -17,8 +17,8 @@ import { IoSearchOutline } from "react-icons/io5";
 const Header = () => {
   const { data: session } = useGetMeQuery();
   const { login } = useHeaderStore();
-  const [isMobile, setIsMobile] = useState(true);
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1000);

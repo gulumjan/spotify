@@ -1,17 +1,25 @@
 .Blocks {
+  overflow-x: auto;
+  padding: 10px 0;
+
   .content {
     display: flex;
+    gap: 16px;
+    padding: 0 10px;
     flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
     .block {
-      margin-top: 18px;
+      scroll-snap-align: start;
+      min-width: 200px;
+      max-width: 250px;
+      width: 80%;
       display: flex;
-      justify-content: flex-start;
       align-items: center;
       gap: 10px;
-      width: 80%;
-      max-width: 250px;
       padding: 8px 7px;
-      background-color: none;
+      background-color: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
       transition: background 0.3s ease;
 
@@ -30,16 +38,50 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         h4 {
           margin: 0;
           font-size: 16px;
           color: #fff;
         }
+
         p {
           margin: 0;
-          padding: 7px 0;
+          padding-top: 5px;
           font-size: 14px;
           color: #aaa;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      gap: 12px;
+
+      .block {
+        min-width: 180px;
+        max-width: 220px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      gap: 8px;
+
+      .block {
+        min-width: 160px;
+        max-width: 200px;
+
+        .text {
+          h4 {
+            font-size: 14px;
+          }
+
+          p {
+            display: none;
+          }
         }
       }
     }

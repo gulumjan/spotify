@@ -8,8 +8,6 @@ const Recommendations = () => {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading recommendations</p>;
 
-  console.log("🚀 ~ Recommendations ~ data:", data);
-
   return (
     <div>
       <h3>Recommendations</h3>

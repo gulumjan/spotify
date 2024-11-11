@@ -1,10 +1,14 @@
 .Albums {
+  overflow-x: auto; // Enable horizontal scrolling
+  padding: 10px 0;
+  scroll-behavior: smooth; // Smooth scrolling for a better UX
+
   .content {
     display: flex;
     flex-wrap: nowrap;
     gap: 12px;
     padding: 10px 0;
-    position: relative; // Ensure that relative positioning is set for the container
+    position: relative;
 
     .albums {
       padding: 8px 18px;
@@ -13,18 +17,8 @@
       align-items: center;
       min-width: 150px;
       justify-content: space-between;
-      position: relative; // Set position relative for correct placement of the play icon
-
-      .play {
-        display: none;
-        position: absolute;
-        top: 73%;
-        right: 4px;
-        transform: translateY(-50%);
-        z-index: 1;
-        color: #1db954;
-        font-size: 40px;
-      }
+      position: relative;
+      border-radius: 8px;
 
       img {
         width: 150px;
@@ -40,12 +34,41 @@
         font-size: 14px;
       }
 
+      .play {
+        display: none;
+        position: absolute;
+        top: 73%;
+        right: 4px;
+        transform: translateY(-50%);
+        z-index: 1;
+        color: #1db954;
+        font-size: 40px;
+      }
+
       &:hover {
-        background: #51515134;
-        border-radius: 8px;
+        background: rgba(81, 81, 81, 0.2);
 
         .play {
           display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      gap: 8px;
+
+      .albums {
+        padding: 6px 16px;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+
+        h5 {
+          font-size: 12px;
         }
       }
     }
