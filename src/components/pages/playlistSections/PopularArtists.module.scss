@@ -2,18 +2,18 @@
   .content {
     .cards {
       display: flex;
-      flex-direction: row; // Set direction to row for horizontal layout
+      flex-direction: row;
       gap: 18px;
-      overflow-x: auto; // Enable horizontal scrolling
-      scroll-snap-type: x mandatory; // Snap to each card
-      padding-bottom: 10px; // Add some space for better scrolling UX
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
 
       .card {
         position: relative;
-        flex: 0 0 auto; // Prevent items from wrapping and ensure horizontal layout
+        flex: 0 0 auto;
         padding: 8px 10px;
         text-align: center;
-        scroll-snap-align: start; // Snap each card to the start of view
+        scroll-snap-align: start;
 
         img {
           border-radius: 50%;
@@ -67,7 +67,6 @@
   }
 }
 
-// Responsive adjustments for horizontal scrolling
 @media (max-width: 768px) {
   .PopularArtists {
     .content {

@@ -1,7 +1,7 @@
 .Albums {
-  overflow-x: auto; // Enable horizontal scrolling
+  overflow-x: auto;
   padding: 10px 0;
-  scroll-behavior: smooth; // Smooth scrolling for a better UX
+  scroll-behavior: smooth;
 
   .content {
     display: flex;

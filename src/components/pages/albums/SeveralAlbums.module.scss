@@ -1,17 +1,10 @@
 .SeveralAlbums {
   overflow-x: auto;
   padding: 10px 0;
-
   scroll-behavior: smooth;
 
-  &::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(128, 128, 128, 0.7);
-    border-radius: 10px;
-  }
+  scrollbar-width: 0;
+  scrollbar-color: none;
 
   .content {
     display: flex;

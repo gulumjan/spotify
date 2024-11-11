@@ -5,16 +5,16 @@
 
   h1 {
     padding: 12px 0 0 15px;
-    font-size: 1.5rem; // Slightly smaller on phones
+    font-size: 1.5rem;
   }
 
   .content {
     display: flex;
-    flex-direction: column; // Stack elements on smaller screens
-    gap: 20px; // Reduced gap for phone sizes
+    flex-direction: column;
+    gap: 20px;
 
     .allMusic {
-      width: 100%; // Full width on smaller screens
+      width: 100%;
       min-height: auto;
       max-height: none;
       padding-right: 0;
@@ -30,22 +30,37 @@
         margin-bottom: 15px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         position: sticky;
         padding: 10px 0;
         z-index: 1;
 
         button {
-          margin-right: 8px;
-          padding: 8px 15px; // Reduced padding for smaller buttons
-          font-size: 0.9rem;
+          margin-right: 10px;
+          padding: 10px 20px;
+          background: none;
+          color: #fff;
+          border-radius: 5px;
+          border: 1px solid transparent;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+
+          &.active {
+            background-color: #1db954;
+            color: #fff;
+            border-color: #1db954;
+          }
         }
       }
 
       h2 {
         color: #fff;
         font-size: 1.25rem;
-        text-align: center; // Center-align headers on smaller screens
+        text-align: center;
       }
     }
   }
