@@ -15,7 +15,7 @@ const FooterMenu: FC = () => {
             <FaHome onClick={() => router.push(`/`)} className={scss.icon} />
             <span>Главная</span>
           </div>
-          <div className={scss.menuItem}>
+          <div onClick={() => router.push(`/search`)} className={scss.menuItem}>
             <FaSearch className={scss.icon} />
             <span>Поиск</span>
           </div>
